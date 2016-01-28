@@ -13,7 +13,7 @@ io.on('connect', function onConnect (socket) {
   let currentRoom = 'default'
   socket.join(currentRoom)
 
-  socket.on('move to room', function moveToRoom(newRoom) {
+  socket.on('move to room', function moveToRoom (newRoom) {
     socket.leave(currentRoom)
     socket.join(newRoom)
     currentRoom = newRoom
