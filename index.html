@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8">
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8"/>
+  <title>Web Sockets</title>
+  <script src="/socket.io/socket.io.js"></script>
+</head>
+<body>
+<div>
+  <input id="room" type="text"/>
+  <button onclick="setRoom()">Set Room</button>
+</div>
+<div>
+  <input id="message" type="text"/>
+  <button onclick="sendMessage()">Send Message</button>
+</div>
+<hr/>
+<script type="application/javascript">
+  'use strict'
+
+  const socket = io()
+
+  socket.on('connect', function onConnect () {
+    console.log(`Connected as ${socket.id}`)
+  })
+
+  socket.on('message', function onMessage (message) {
+    // add received message to page
+    const $p = document.createElement("p")
+    $p.appendChild(document.createTextNode(`${message.sender}: ${message.content}`))
+    document.body.appendChild($p)
+  })
+
+  function setRoom () {
+    socket.emit('move to room', document.getElementById('room').value)
+  }
+
+  function sendMessage () {
+    // send message
+    const $message = document.getElementById('message')
+    socket.emit('message', $message.value)
+    // add to page
+    const $p = document.createElement("p")
+    $p.appendChild(document.createTextNode(`YOU: ${$message.value}`))
+    document.body.appendChild($p)
+    // clear message input box
+    $message.value = ''
+  }
+</script>
+</body>
+</html>

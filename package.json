@@ -1,0 +1,24 @@
+{
+  "name": "simple-chat-websockets",
+  "private": true,
+  "version": "0.1.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jameshiew/simple-chat-websockets.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jameshiew/simple-chat-websockets/issues"
+  },
+  "homepage": "https://github.com/jameshiew/simple-chat-websockets#readme",
+  "dependencies": {
+    "express": "^4.13.4",
+    "socket.io": "^1.4.5"
+  }
+}
