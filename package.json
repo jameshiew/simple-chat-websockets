@@ -5,7 +5,7 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "nodemon server.js"
   },
   "repository": {
     "type": "git",
@@ -19,6 +19,7 @@
   "homepage": "https://github.com/jameshiew/simple-chat-websockets#readme",
   "dependencies": {
     "express": "^4.13.4",
+    "nodemon": "^1.8.1",
     "socket.io": "^1.4.5"
   }
 }
