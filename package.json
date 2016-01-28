@@ -2,7 +2,7 @@
   "name": "simple-chat-websockets",
   "private": true,
   "version": "0.1.0",
-  "description": "",
+  "description": "Example chat application using socket.io where users can only be in one chat channel at a time",
   "main": "server.js",
   "scripts": {
     "start": "nodemon server.js"
