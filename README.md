@@ -1,6 +1,8 @@
 # simple-chat-websockets
 
-Example chat application using socket.io where users can only be in one chat channel at a time
+Example chat application using socket.io where users can only be in one chat channel at a time.
+
+This simple example was created in response to [this question](https://stackoverflow.com/a/35060680/2387626) on Stack Overflow.
 
 # Install
 
